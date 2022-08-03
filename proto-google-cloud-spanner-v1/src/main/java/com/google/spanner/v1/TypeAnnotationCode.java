@@ -57,6 +57,8 @@ public enum TypeAnnotationCode implements com.google.protobuf.ProtocolMessageEnu
    * <code>PG_NUMERIC = 2;</code>
    */
   PG_NUMERIC(2),
+  /** <code>PG_JSONB = 3;</code> */
+  PG_JSONB(3),
   UNRECOGNIZED(-1),
   ;
 
@@ -85,6 +87,8 @@ public enum TypeAnnotationCode implements com.google.protobuf.ProtocolMessageEnu
    * <code>PG_NUMERIC = 2;</code>
    */
   public static final int PG_NUMERIC_VALUE = 2;
+  /** <code>PG_JSONB = 3;</code> */
+  public static final int PG_JSONB_VALUE = 3;
 
   public final int getNumber() {
     if (this == UNRECOGNIZED) {
@@ -114,6 +118,8 @@ public enum TypeAnnotationCode implements com.google.protobuf.ProtocolMessageEnu
         return TYPE_ANNOTATION_CODE_UNSPECIFIED;
       case 2:
         return PG_NUMERIC;
+      case 3:
+        return PG_JSONB;
       default:
         return null;
     }
